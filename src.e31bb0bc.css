@@ -78,7 +78,7 @@ button {
 .body-page {
   overflow-x: hidden;
   max-width: 375px;
-  background: #e5e5e5;
+  background: #ffffff;
 }
 @media screen and (min-width: 1920px) {
   .body-page {
