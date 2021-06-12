@@ -1,4 +1,31 @@
 .header {
-  background: black;
-  height: 120px;
+  @media screen and (min-width: $viewport-desktop) {
+    height: 82px;
+  }
+  & .content-header {
+    @media screen and (min-width: $viewport-desktop) {
+      display: flex;
+    }
+  }
+  & .logo {
+    @media screen and (min-width: $viewport-desktop) {
+      width: 197px;
+      height: 37px;
+    }
+  }
+  & .icon-logo {
+    width: 100%;
+  }
+  & .nav {
+    @media screen and (min-width: $viewport-desktop) {
+      display: flex;
+      margin-left: 229px;
+    }
+    & .nav-item {
+      @media screen and (min-width: $viewport-desktop) {
+        width: 190px;
+        height: 17px;
+      }
+    }
+  }
 }
