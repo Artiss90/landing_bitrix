@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.js"],"names":["console","log"],"mappings":";AACAA,QAAQC,IAAI","file":"src.5471679c.js","sourceRoot":"..\\src","sourcesContent":["// import \"./sass/main.scss\";\r\nconsole.log(\"start\");\r\n"]}
