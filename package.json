@@ -19,12 +19,13 @@
     "url": "https://github.com/Artiss90/landing_bitrix/issues"
   },
   "homepage": "https://github.com/Artiss90/landing_bitrix#readme",
-  "dependencies": {
-    "htmlnano": "^1.0.0"
-  },
+  "dependencies": {},
   "devDependencies": {
+    "cssnano": "^4.1.11",
     "gh-pages": "^3.2.0",
+    "htmlnano": "^1.0.0",
     "parcel-bundler": "^1.12.5",
+    "postcss": "^8.3.2",
     "posthtml-include": "^1.7.1",
     "sass": "^1.34.1"
   }
