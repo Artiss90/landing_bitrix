@@ -1,15 +1,19 @@
-$main-font: serif;
-$secondary-font: sans-serif;
+$main-font: "Gotham Pro";
 $line-height: 120%;
 $font-size: 16px;
 $font-weight: 300;
+$letter-spacing: 0em;
 
-$main-text: rgba(24, 25, 31);
+$main-text: rgba(0, 0, 0);
+$minor-text: rgba(255, 255, 255);
+$accent: rgb(242, 163, 34);
 
 $background-body: #ffffff;
 
 $function-of-time: cubic-bezier(0.4, 0, 0.2, 1);
 $transition-duration: 250ms;
+$transition-all: all $function-of-time $transition-duration;
+$transition-translate: translate $function-of-time $transition-duration;
 
 $viewport-mobile: 375px;
 $viewport-desktop: 1920px;
