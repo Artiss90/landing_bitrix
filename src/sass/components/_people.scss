@@ -1,0 +1,16 @@
+.people {
+  padding: 0;
+  @media screen and (min-width: $viewport-desktop) {
+    height: 310px;
+  }
+  & .description-people {
+    & .title-people {
+      font-family: Gotham Pro;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 48px;
+      line-height: 120%; /* or 58px */
+      color: #333333;
+    }
+  }
+}
