@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "parcel src/*.html",
     "build": "parcel build src/*.html",
-    "predeploy": "npm run build -- --public-url=/Landing_company/",
+    "predeploy": "npm run build -- --public-url=/landing_bitrix/",
     "deploy": "gh-pages -d dist"
   },
   "repository": {
