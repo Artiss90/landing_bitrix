@@ -5,12 +5,28 @@
   }
   & .description-people {
     & .title-people {
-      font-family: Gotham Pro;
-      font-style: normal;
+      margin-bottom: 30px;
       font-weight: 900;
       font-size: 48px;
       line-height: 120%; /* or 58px */
       color: #333333;
+    }
+    & .text-people {
+      margin-bottom: 7px;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 27px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      & .accent {
+        font-weight: 700;
+      }
+    }
+  }
+  & .img-people {
+    @media screen and (min-width: $viewport-desktop) {
+      margin-left: 40px;
     }
   }
 }
