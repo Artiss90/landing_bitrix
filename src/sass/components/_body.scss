@@ -1,0 +1,8 @@
+.body-page {
+  overflow-x: hidden;
+  max-width: $viewport-mobile;
+  background: $background-body;
+  @media screen and (min-width: $viewport-desktop) {
+    max-width: $viewport-desktop;
+  }
+}
