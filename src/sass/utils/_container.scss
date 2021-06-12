@@ -1,4 +1,9 @@
 .container {
   @media screen and (min-width: $viewport-desktop) {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 90px;
+    width: 1188px;
   }
 }
