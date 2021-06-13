@@ -1,4 +1,6 @@
 .container {
+  @media screen and (max-width: $pre-viewport-desktop) {
+  }
   @media screen and (min-width: $viewport-desktop) {
     display: flex;
     margin-left: auto;

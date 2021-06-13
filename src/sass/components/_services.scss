@@ -1,8 +1,16 @@
 .services-list {
+  @media screen and (max-width: $pre-viewport-desktop) {
+    text-align: center;
+  }
   @media screen and (min-width: $viewport-desktop) {
     height: 299px;
   }
   & .item-services {
+    @media screen and (max-width: $pre-viewport-desktop) {
+      width: 100%;
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
     width: calc(100% / 4);
     height: 100%;
     padding-left: 39px;

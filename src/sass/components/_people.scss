@@ -5,6 +5,12 @@
   }
   & .description-people {
     & .title-people {
+      @media screen and (max-width: $pre-viewport-desktop) {
+        text-align: center;
+        margin-bottom: 7px;
+        font-weight: 700;
+        font-size: 24px;
+      }
       margin-bottom: 30px;
       font-weight: 900;
       font-size: 48px;
@@ -12,6 +18,13 @@
       color: #333333;
     }
     & .text-people {
+      @media screen and (max-width: $pre-viewport-desktop) {
+        text-align: center;
+        margin-bottom: 7px;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 19px;
+      }
       margin-bottom: 7px;
       font-size: 14px;
       font-weight: 400;

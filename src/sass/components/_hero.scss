@@ -31,6 +31,10 @@
   & .greeting-hero {
     position: absolute;
     top: 0;
+    @media screen and (max-width: $pre-viewport-desktop) {
+      top: 10px;
+      padding-left: 7px;
+    }
     @media screen and (min-width: $viewport-desktop) {
       padding-left: 324px;
       padding-top: 104px;
@@ -88,7 +92,7 @@
         font-size: 10px;
         font-weight: 300;
         line-height: 12px;
-        padding: 3px 7px;
+        padding: 3px 0px;
         width: 165px;
       }
       margin-top: 47px;

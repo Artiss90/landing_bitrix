@@ -1,5 +1,8 @@
 .stats {
   position: relative;
+  @media screen and (max-width: $pre-viewport-desktop) {
+    margin-bottom: 45px;
+  }
   @media screen and (min-width: $viewport-desktop) {
     height: 388px;
     margin-bottom: 90px;
@@ -10,6 +13,11 @@
       url(./../images/image-fonStat.jpg) no-repeat;
   }
   & .list-stats {
+    @media screen and (max-width: $pre-viewport-desktop) {
+      flex-wrap: wrap;
+      left: 55px;
+      top: 70px;
+    }
     position: absolute;
     top: 91px;
     display: flex;
@@ -20,6 +28,11 @@
       height: 297px;
     }
     & .item-stats {
+      @media screen and (max-width: $pre-viewport-desktop) {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        width: 150px;
+      }
       padding-top: 78px;
       padding-bottom: 77px;
       width: calc(100% / 4);
@@ -30,6 +43,12 @@
       }
     }
     & .total {
+      @media screen and (max-width: $pre-viewport-desktop) {
+        margin-bottom: 7px;
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 24px;
+      }
       margin-bottom: 13px;
       font-weight: 900;
       font-size: 96px;
