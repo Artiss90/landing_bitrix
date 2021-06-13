@@ -1,5 +1,9 @@
 .stats {
   position: relative;
+  @media screen and (min-width: $viewport-desktop) {
+    height: 388px;
+    margin-bottom: 90px;
+  }
   & .fon-works {
     height: 258px;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
@@ -9,10 +13,12 @@
     position: absolute;
     top: 91px;
     display: flex;
-    margin-left: 366px;
-    margin-right: 366px;
-    margin-bottom: 0;
-    height: 297px;
+    @media screen and (min-width: $viewport-desktop) {
+      margin-left: 366px;
+      margin-right: 366px;
+      margin-bottom: 0;
+      height: 297px;
+    }
     & .item-stats {
       padding-top: 78px;
       padding-bottom: 77px;

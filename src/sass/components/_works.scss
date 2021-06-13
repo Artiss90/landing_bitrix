@@ -1,0 +1,190 @@
+.works {
+  position: relative;
+  flex-direction: column;
+  @media screen and (min-width: $viewport-desktop) {
+    height: 680px;
+  }
+  & .title-works {
+    @media screen and (min-width: $viewport-desktop) {
+      margin-bottom: 24px;
+      font-size: 48px;
+      font-weight: 900;
+      line-height: 58px;
+      text-align: center;
+    }
+  }
+  & .list-category-works {
+    display: flex;
+    justify-content: center;
+  }
+  //   & .active .btn-works {
+  //     color: $accent;
+  //     &::after {
+  //       content: "";
+  //       display: block;
+  //       position: absolute;
+  //       left: -10%;
+  //       width: 125%;
+  //       height: 5px;
+  //       background: $accent;
+  //     }
+  //   }
+  & .item-works {
+    margin-right: 88px;
+    &.active .btn-works,
+    &:hover .btn-works,
+    &:focus-within .btn-works {
+      color: $accent;
+
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        left: -10%;
+        width: 125%;
+        height: 5px;
+        background: $accent;
+      }
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  & .btn-works {
+    position: relative;
+    padding: 0;
+    margin-bottom: 37px;
+    font-family: Gotham Pro;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700; // ! в макете написано 400, но на вид 700
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #000000;
+
+    background-color: transparent;
+    transition: color 250ms ease;
+  }
+
+  & .slider-works {
+    @media screen and (min-width: $viewport-desktop) {
+      display: flex;
+      justify-content: center;
+      height: 574px;
+    }
+
+    & .view-works {
+      background: linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 0.54),
+          rgba(0, 0, 0, 0.54)
+        ),
+        url(./../images/image-furniture.jpg);
+      @media screen and (min-width: $viewport-desktop) {
+        width: 543px;
+        padding-left: 99px;
+        padding-top: 153px;
+        padding-right: 58px;
+        padding-bottom: 143px;
+      }
+      & .title-view-works {
+        @media screen and (min-width: $viewport-desktop) {
+          font-size: 48px;
+          font-weight: 900;
+          line-height: 56px;
+          color: $minor-text;
+        }
+        & .accent-text {
+          color: $accent;
+        }
+      }
+    }
+    & .description-works {
+      position: relative;
+      @media screen and (min-width: $viewport-desktop) {
+        margin-left: 38px;
+        padding-left: 55px;
+        padding-top: 99px;
+        padding-right: 88px;
+        padding-bottom: 267px;
+        width: 543px;
+
+        border: 15px solid rgba(247, 153, 0, 1);
+      }
+      & .text-description {
+        margin-bottom: 7px;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        & .accent-description {
+          font-weight: 700;
+          line-height: 20px;
+        }
+      }
+      & .all-works {
+        @media screen and (min-width: $viewport-desktop) {
+          position: absolute;
+          bottom: -6px;
+          right: -1px;
+          padding-left: 46px;
+          padding-top: 24px;
+          padding-right: 25px;
+          padding-bottom: 17px;
+
+          background-color: rgba(247, 153, 0, 1);
+          font-family: Gotham Pro;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 20px;
+          letter-spacing: 0em;
+          text-align: left;
+          color: $minor-text;
+          transition: color 250ms ease;
+        }
+        &:hover,
+        &:focus-within {
+          color: $main-text;
+        }
+      }
+    }
+  }
+
+  & .controls {
+    position: absolute;
+    @media screen and (min-width: $viewport-desktop) {
+      display: flex;
+      justify-content: space-between;
+      bottom: 70px;
+      right: 379px;
+      width: 125px;
+      height: 52px;
+    }
+    & .arrow-prev {
+      transform: rotate(180deg);
+    }
+    & .icon-controls {
+      &:hover {
+        --color5: rgb(242, 163, 34);
+      }
+    }
+  }
+
+  & .fade-works {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+
+  @keyframes fade-works {
+    from {
+      opacity: 0.4;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}

@@ -8,7 +8,19 @@
     background: rgba(125, 125, 125, 1);
     position: relative;
   }
+  & .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
 
+  @keyframes fade {
+    from {
+      opacity: 0.4;
+    }
+    to {
+      opacity: 1;
+    }
+  }
   & .greeting-hero {
     position: absolute;
     top: 0;
@@ -62,19 +74,20 @@
     display: flex;
     margin-left: 920px;
     margin-right: 921px;
-    & .dots {
-      background: transparent;
+    & .dot {
+      background-color: transparent;
       margin-right: 22px;
       width: 13px;
       height: 13px;
       border-radius: 100%;
       border: 2px solid #575757;
+      transition: background-color 0.6m ease;
       &:last-child {
         margin-right: 0;
       }
     }
     & .active {
-      background: $accent;
+      background-color: $accent;
     }
   }
 }
