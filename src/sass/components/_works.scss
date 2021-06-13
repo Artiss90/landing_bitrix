@@ -5,31 +5,28 @@
     height: 680px;
   }
   & .title-works {
+    text-align: center;
+    @media screen and (max-width: $pre-viewport-desktop) {
+      margin-bottom: 10px;
+      font-size: 26px;
+      font-weight: 700;
+      line-height: 30px;
+    }
     @media screen and (min-width: $viewport-desktop) {
       margin-bottom: 24px;
       font-size: 48px;
       font-weight: 900;
       line-height: 58px;
-      text-align: center;
     }
   }
   & .list-category-works {
     display: flex;
     justify-content: center;
   }
-  //   & .active .btn-works {
-  //     color: $accent;
-  //     &::after {
-  //       content: "";
-  //       display: block;
-  //       position: absolute;
-  //       left: -10%;
-  //       width: 125%;
-  //       height: 5px;
-  //       background: $accent;
-  //     }
-  //   }
   & .item-works {
+    @media screen and (max-width: $pre-viewport-desktop) {
+      margin-right: 10px;
+    }
     margin-right: 88px;
     &.active .btn-works,
     &:hover .btn-works,
@@ -44,6 +41,10 @@
         width: 125%;
         height: 5px;
         background: $accent;
+        @media screen and (max-width: $pre-viewport-desktop) {
+          width: 100%;
+          height: 3px;
+        }
       }
     }
     &:last-child {
@@ -51,6 +52,11 @@
     }
   }
   & .btn-works {
+    @media screen and (max-width: $pre-viewport-desktop) {
+      margin-bottom: 17px;
+      font-size: 16px;
+      line-height: 20px;
+    }
     position: relative;
     padding: 0;
     margin-bottom: 37px;
@@ -81,6 +87,12 @@
           rgba(0, 0, 0, 0.54)
         ),
         url(./../images/image-furniture.jpg);
+      @media screen and (max-width: $pre-viewport-desktop) {
+        padding-left: 29px;
+        padding-top: 120px;
+        padding-right: 18px;
+        padding-bottom: 43px;
+      }
       @media screen and (min-width: $viewport-desktop) {
         width: 574px;
         padding-left: 99px;
@@ -89,11 +101,16 @@
         padding-bottom: 143px;
       }
       & .title-view-works {
+        color: $minor-text;
+        @media screen and (max-width: $pre-viewport-desktop) {
+          font-size: 22px;
+          font-weight: 700;
+          line-height: 26px;
+        }
         @media screen and (min-width: $viewport-desktop) {
           font-size: 48px;
           font-weight: 900;
           line-height: 56px;
-          color: $minor-text;
         }
         & .accent-text {
           color: $accent;
@@ -102,6 +119,14 @@
     }
     & .description-works {
       position: relative;
+      @media screen and (max-width: $pre-viewport-desktop) {
+        margin-left: 8px;
+        padding-left: 15px;
+        padding-top: 5px;
+        padding-right: 8px;
+        padding-bottom: 7px;
+        border: 3px solid rgba(247, 153, 0, 1);
+      }
       @media screen and (min-width: $viewport-desktop) {
         margin-left: 38px;
         padding-left: 55px;
@@ -113,7 +138,7 @@
         border: 15px solid rgba(247, 153, 0, 1);
       }
       & .text-description {
-        margin-bottom: 7px;
+        margin-bottom: 17px;
         font-size: 14px;
         font-weight: 400;
         line-height: 20px;
@@ -126,26 +151,30 @@
         }
       }
       & .all-works {
-        @media screen and (min-width: $viewport-desktop) {
-          position: absolute;
-          bottom: -6px;
-          right: -1px;
-          padding-left: 46px;
-          padding-top: 24px;
-          padding-right: 25px;
-          padding-bottom: 17px;
-
-          background-color: rgba(247, 153, 0, 1);
-          font-family: Gotham Pro;
-          font-size: 14px;
-          font-style: normal;
-          font-weight: 700;
-          line-height: 20px;
-          letter-spacing: 0em;
-          text-align: left;
-          color: $minor-text;
-          transition: color 250ms ease;
+        @media screen and (max-width: $pre-viewport-desktop) {
+          bottom: -2px;
+          right: -3px;
+          padding: 1px;
         }
+        position: absolute;
+        bottom: -6px;
+        right: -1px;
+        padding-left: 46px;
+        padding-top: 24px;
+        padding-right: 25px;
+        padding-bottom: 17px;
+
+        background-color: rgba(247, 153, 0, 1);
+        font-family: Gotham Pro;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 20px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: $minor-text;
+        transition: color 250ms ease;
+
         &:hover,
         &:focus-within {
           color: $main-text;
@@ -156,12 +185,16 @@
 
   & .controls {
     position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 125px;
+    @media screen and (max-width: $pre-viewport-desktop) {
+      bottom: 20%;
+      left: 10%;
+    }
     @media screen and (min-width: $viewport-desktop) {
-      display: flex;
-      justify-content: space-between;
       bottom: 70px;
       right: 379px;
-      width: 125px;
       height: 52px;
     }
     & .arrow-prev {
