@@ -1,4 +1,78 @@
 .footer {
-  // background: grey;
-  height: 100px;
+  @media screen and (min-width: $viewport-desktop) {
+    padding-top: 90px;
+  }
+  & .container {
+    margin-bottom: 0;
+    height: 100%;
+  }
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.91), rgba(0, 0, 0, 0.91)),
+    url(./../images/image-footer.jpg);
+  @media screen and (min-width: $viewport-desktop) {
+    height: 449px;
+  }
+  & .logo-footer {
+    @media screen and (min-width: $viewport-desktop) {
+      display: block;
+      margin-top: 47px;
+    }
+  }
+  & .list-nav-footer {
+    @media screen and (min-width: $viewport-desktop) {
+      display: flex;
+    }
+  }
+  & .title-footer {
+    margin-bottom: 24px;
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 27px;
+    color: $minor-text;
+  }
+  & .item-nav-footer {
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 27px;
+    @media screen and (min-width: $viewport-desktop) {
+      &:nth-child(0n + 1) {
+        margin-right: 96px;
+      }
+      &:nth-child(0n + 2) {
+        margin-right: 132px;
+      }
+      &:nth-child(0n + 3) {
+        margin-right: 246px;
+      }
+    }
+    & .item {
+      margin-bottom: 10px;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 28px;
+      color: $minor-text;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  & .tel {
+    @extend.title-footer;
+    margin-bottom: 20px;
+    &:nth-child(0n + 2) {
+      margin-bottom: 24px;
+    }
+  }
+  & .list-social {
+    display: flex;
+  }
+  & .item-social {
+    margin-right: 7px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  & .icon-social {
+    width: 31px;
+    height: 31px;
+  }
 }
