@@ -5,10 +5,17 @@
   }
 
   & .slide-hero {
+    @media screen and (max-width: $pre-viewport-desktop) {
+      height: 202px;
+    }
     background: rgba(125, 125, 125, 1);
     position: relative;
   }
   & .fade {
+    @media screen and (max-width: $pre-viewport-desktop) {
+      object-fit: cover;
+      height: 100%;
+    }
     animation-name: fade;
     animation-duration: 1.5s;
   }
@@ -31,6 +38,11 @@
       padding-bottom: 68px;
     }
     & .title {
+      @media screen and (max-width: $pre-viewport-desktop) {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 24px;
+      }
       width: 100%;
       color: $minor-text;
       font-size: 72px;
@@ -38,6 +50,11 @@
       line-height: 87px;
       text-align: left;
       & .minor-text {
+        @media screen and (max-width: $pre-viewport-desktop) {
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 22px;
+        }
         color: $minor-text;
         font-size: 54px;
         font-weight: 900;
@@ -46,6 +63,14 @@
       }
     }
     & .accent-text {
+      @media screen and (max-width: $pre-viewport-desktop) {
+        margin-top: 5px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19px;
+        padding: 4px 5px;
+        width: 165px;
+      }
       margin-top: 15px;
       padding: 9px 33px;
       width: 329px;
@@ -58,6 +83,14 @@
       color: #070508;
     }
     & .text {
+      @media screen and (max-width: $pre-viewport-desktop) {
+        margin-top: 2px;
+        font-size: 10px;
+        font-weight: 300;
+        line-height: 12px;
+        padding: 3px 7px;
+        width: 165px;
+      }
       margin-top: 47px;
       padding-right: 88px; // * 1022px - 934px
       color: $minor-text;
@@ -69,6 +102,11 @@
   }
 
   & .controls {
+    @media screen and (max-width: $pre-viewport-desktop) {
+      margin-left: 0;
+      margin-right: 0;
+      right: 30%;
+    }
     position: absolute;
     bottom: 26px;
     display: flex;
