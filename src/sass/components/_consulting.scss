@@ -1,10 +1,17 @@
 .consulting {
+  @media screen and (max-width: $pre-viewport-desktop) {
+    margin-bottom: 15px;
+  }
   @media screen and (min-width: $viewport-desktop) {
     display: flex;
     width: 1188px;
     height: 528px;
   }
   .form-blank {
+    @media screen and (max-width: $pre-viewport-desktop) {
+      padding-left: 7px;
+      padding-right: 7px;
+    }
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -69,10 +76,21 @@
       @media screen and (min-width: $viewport-desktop) {
         margin-top: 31px;
       }
+      @media screen and (max-width: $pre-viewport-desktop) {
+        margin-top: 7px;
+      }
     }
   }
 
   & .title-description {
+    @media screen and (max-width: $pre-viewport-desktop) {
+      text-align: center;
+      margin-bottom: 13px;
+      font-size: 28px;
+      font-weight: 700;
+      line-height: 36px;
+      width: 100%;
+    }
     @media screen and (min-width: $viewport-desktop) {
       margin-bottom: 23px;
       width: 519px;
@@ -82,6 +100,14 @@
     }
   }
   & .text-description {
+    @media screen and (max-width: $pre-viewport-desktop) {
+      width: 375px;
+      text-align: center;
+      margin-bottom: 7px;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 16px;
+    }
     width: 517px;
     font-size: 14px;
     font-weight: 400;

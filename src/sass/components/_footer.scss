@@ -1,4 +1,9 @@
 .footer {
+  @media screen and (max-width: $pre-viewport-desktop) {
+    position: relative;
+    padding-top: 60px;
+    text-align: center;
+  }
   @media screen and (min-width: $viewport-desktop) {
     padding-top: 90px;
   }
@@ -12,6 +17,11 @@
     height: 449px;
   }
   & .logo-footer {
+    @media screen and (max-width: $pre-viewport-desktop) {
+      position: absolute;
+      top: 7px;
+      right: 25%;
+    }
     @media screen and (min-width: $viewport-desktop) {
       display: block;
       margin-top: 47px;
@@ -66,6 +76,7 @@
     display: flex;
   }
   & .item-social {
+    justify-content: center;
     margin-right: 7px;
     &:last-child {
       margin-right: 0;
