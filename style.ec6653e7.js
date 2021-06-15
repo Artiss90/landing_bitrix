@@ -184,126 +184,12 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"sass/main.scss":[function(require,module,exports) {
+},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"font/gothman_pro/style.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./..\\images\\image-fonStat.jpg":[["image-fonStat.b1f7be80.jpg","images/image-fonStat.jpg"],"images/image-fonStat.jpg"],"./..\\images\\image-furniture.jpg":[["image-furniture.b7dbfc72.jpg","images/image-furniture.jpg"],"images/image-furniture.jpg"],"./..\\images\\image-footer.jpg":[["image-footer.b6980457.jpg","images/image-footer.jpg"],"images/image-footer.jpg"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"js/slider-hero.js":[function(require,module,exports) {
-// * for ".dot"
-function currentSlide(n) {
-  showSlides(slidePosition = n);
-}
-
-var dot_1 = document.querySelector(".dot[data-position-1]");
-var dot_2 = document.querySelector(".dot[data-position-2]");
-var dot_3 = document.querySelector(".dot[data-position-3]");
-dot_1.addEventListener("click", function () {
-  return currentSlide(1);
-});
-dot_2.addEventListener("click", function () {
-  return currentSlide(2);
-});
-dot_3.addEventListener("click", function () {
-  return currentSlide(3);
-});
-var slidePosition = 1;
-showSlides(slidePosition); // * our logic
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("fade");
-  var dot = document.getElementsByClassName("dot");
-
-  for (i = 0; i < slides.length; i = i + 1) {
-    slides[i].style.display = "none";
-  }
-
-  for (i = 0; i < dot.length; i = i + 1) {
-    dot[i].className = dot[i].className.replace(" active", ""); // ? перед active должен бить пробел
-  }
-
-  slides[slidePosition - 1].style.display = "block";
-  dot[slidePosition - 1].className += " active";
-}
-},{}],"js/slider-works.js":[function(require,module,exports) {
-var slidePosition = 1;
-showSlides(slidePosition);
-
-function currentSlide(n) {
-  showSlides(slidePosition = n);
-  console.log(slidePosition);
-} // ? for "category works"
-
-
-var allCategoryRef = document.querySelector(".btn-works[data-category-all]");
-var btnWorksCategoryRef_1 = document.querySelector(".btn-works[data-category-1]");
-var btnWorksCategoryRef_2 = document.querySelector(".btn-works[data-category-2]");
-var btnWorksCategoryRef_3 = document.querySelector(".btn-works[data-category-3]");
-allCategoryRef.addEventListener("click", function () {
-  return currentSlide(1);
-});
-btnWorksCategoryRef_1.addEventListener("click", function () {
-  return currentSlide(2);
-});
-btnWorksCategoryRef_2.addEventListener("click", function () {
-  return currentSlide(3);
-});
-btnWorksCategoryRef_3.addEventListener("click", function () {
-  return currentSlide(4);
-}); // ? for arrow prev & next
-
-var getPrevRef = document.querySelector("a.prev");
-console.log("🚀 ~ file: slider-works.js ~ line 22 ~ getPrevRef", getPrevRef);
-var getNextRef = document.querySelector("a.next");
-console.log("🚀 ~ file: slider-works.js ~ line 26 ~ getNextRef", getNextRef);
-getPrevRef.addEventListener("click", function () {
-  return plusSlides(-1);
-});
-getNextRef.addEventListener("click", function () {
-  return plusSlides(1);
-});
-
-function plusSlides(n) {
-  showSlides(slidePosition = slidePosition + n);
-} // ? our logic
-
-
-function showSlides(n) {
-  console.log("🚀 ~ file: slider-works.js ~ line 38 ~ showSlides ~ n show", n);
-  var i;
-  var slides = document.getElementsByClassName("fade-works");
-  var category = document.getElementsByClassName("item-works"); // ? если slidePosition > длины псевдомассива slides
-
-  if (n > slides.length) {
-    slidePosition = 1;
-  } // ? если slidePosition < 1 => возвращаем позицию последнего элемента
-
-
-  if (n < 1) {
-    slidePosition = slides.length;
-  }
-
-  for (i = 0; i < slides.length; i = i + 1) {
-    slides[i].style.display = "none";
-  }
-
-  for (i = 0; i < category.length; i = i + 1) {
-    category[i].className = category[i].className.replace(" active", "");
-  }
-
-  slides[slidePosition - 1].style.display = "flex";
-  category[slidePosition - 1].className += " active";
-}
-},{}],"index.js":[function(require,module,exports) {
-"use strict";
-
-require("./sass/main.scss");
-
-require("./js/slider-hero");
-
-require("./js/slider-works");
-},{"./sass/main.scss":"sass/main.scss","./js/slider-hero":"js/slider-hero.js","./js/slider-works":"js/slider-works.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./GothamPro-Bold.woff2":[["GothamPro-Bold.290d2fda.woff2","font/gothman_pro/GothamPro-Bold.woff2"],"font/gothman_pro/GothamPro-Bold.woff2"],"./GothamPro-Bold.woff":[["GothamPro-Bold.dc236190.woff","font/gothman_pro/GothamPro-Bold.woff"],"font/gothman_pro/GothamPro-Bold.woff"],"./GothamPro-Bold.ttf":[["GothamPro-Bold.0fd2a877.ttf","font/gothman_pro/GothamPro-Bold.ttf"],"font/gothman_pro/GothamPro-Bold.ttf"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -331,7 +217,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51299" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63229" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -507,5 +393,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
-//# sourceMappingURL=/src.e31bb0bc.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js"], null)
+//# sourceMappingURL=/style.ec6653e7.js.map

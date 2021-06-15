@@ -184,126 +184,12 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"sass/main.scss":[function(require,module,exports) {
+},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"font/gothman_pro/stylesheet.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./..\\images\\image-fonStat.jpg":[["image-fonStat.b1f7be80.jpg","images/image-fonStat.jpg"],"images/image-fonStat.jpg"],"./..\\images\\image-furniture.jpg":[["image-furniture.b7dbfc72.jpg","images/image-furniture.jpg"],"images/image-furniture.jpg"],"./..\\images\\image-footer.jpg":[["image-footer.b6980457.jpg","images/image-footer.jpg"],"images/image-footer.jpg"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"js/slider-hero.js":[function(require,module,exports) {
-// * for ".dot"
-function currentSlide(n) {
-  showSlides(slidePosition = n);
-}
-
-var dot_1 = document.querySelector(".dot[data-position-1]");
-var dot_2 = document.querySelector(".dot[data-position-2]");
-var dot_3 = document.querySelector(".dot[data-position-3]");
-dot_1.addEventListener("click", function () {
-  return currentSlide(1);
-});
-dot_2.addEventListener("click", function () {
-  return currentSlide(2);
-});
-dot_3.addEventListener("click", function () {
-  return currentSlide(3);
-});
-var slidePosition = 1;
-showSlides(slidePosition); // * our logic
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("fade");
-  var dot = document.getElementsByClassName("dot");
-
-  for (i = 0; i < slides.length; i = i + 1) {
-    slides[i].style.display = "none";
-  }
-
-  for (i = 0; i < dot.length; i = i + 1) {
-    dot[i].className = dot[i].className.replace(" active", ""); // ? перед active должен бить пробел
-  }
-
-  slides[slidePosition - 1].style.display = "block";
-  dot[slidePosition - 1].className += " active";
-}
-},{}],"js/slider-works.js":[function(require,module,exports) {
-var slidePosition = 1;
-showSlides(slidePosition);
-
-function currentSlide(n) {
-  showSlides(slidePosition = n);
-  console.log(slidePosition);
-} // ? for "category works"
-
-
-var allCategoryRef = document.querySelector(".btn-works[data-category-all]");
-var btnWorksCategoryRef_1 = document.querySelector(".btn-works[data-category-1]");
-var btnWorksCategoryRef_2 = document.querySelector(".btn-works[data-category-2]");
-var btnWorksCategoryRef_3 = document.querySelector(".btn-works[data-category-3]");
-allCategoryRef.addEventListener("click", function () {
-  return currentSlide(1);
-});
-btnWorksCategoryRef_1.addEventListener("click", function () {
-  return currentSlide(2);
-});
-btnWorksCategoryRef_2.addEventListener("click", function () {
-  return currentSlide(3);
-});
-btnWorksCategoryRef_3.addEventListener("click", function () {
-  return currentSlide(4);
-}); // ? for arrow prev & next
-
-var getPrevRef = document.querySelector("a.prev");
-console.log("🚀 ~ file: slider-works.js ~ line 22 ~ getPrevRef", getPrevRef);
-var getNextRef = document.querySelector("a.next");
-console.log("🚀 ~ file: slider-works.js ~ line 26 ~ getNextRef", getNextRef);
-getPrevRef.addEventListener("click", function () {
-  return plusSlides(-1);
-});
-getNextRef.addEventListener("click", function () {
-  return plusSlides(1);
-});
-
-function plusSlides(n) {
-  showSlides(slidePosition = slidePosition + n);
-} // ? our logic
-
-
-function showSlides(n) {
-  console.log("🚀 ~ file: slider-works.js ~ line 38 ~ showSlides ~ n show", n);
-  var i;
-  var slides = document.getElementsByClassName("fade-works");
-  var category = document.getElementsByClassName("item-works"); // ? если slidePosition > длины псевдомассива slides
-
-  if (n > slides.length) {
-    slidePosition = 1;
-  } // ? если slidePosition < 1 => возвращаем позицию последнего элемента
-
-
-  if (n < 1) {
-    slidePosition = slides.length;
-  }
-
-  for (i = 0; i < slides.length; i = i + 1) {
-    slides[i].style.display = "none";
-  }
-
-  for (i = 0; i < category.length; i = i + 1) {
-    category[i].className = category[i].className.replace(" active", "");
-  }
-
-  slides[slidePosition - 1].style.display = "flex";
-  category[slidePosition - 1].className += " active";
-}
-},{}],"index.js":[function(require,module,exports) {
-"use strict";
-
-require("./sass/main.scss");
-
-require("./js/slider-hero");
-
-require("./js/slider-works");
-},{"./sass/main.scss":"sass/main.scss","./js/slider-hero":"js/slider-hero.js","./js/slider-works":"js/slider-works.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./GothamPro-Bold.eot":[["GothamPro-Bold.eed8e758.eot","font/gothman_pro/GothamPro-Bold.eot"],"font/gothman_pro/GothamPro-Bold.eot"],"./GothamPro-Bold.woff2":[["GothamPro-Bold.290d2fda.woff2","font/gothman_pro/GothamPro-Bold.woff2"],"font/gothman_pro/GothamPro-Bold.woff2"],"./GothamPro-Bold.woff":[["GothamPro-Bold.dc236190.woff","font/gothman_pro/GothamPro-Bold.woff"],"font/gothman_pro/GothamPro-Bold.woff"],"./GothamPro-Bold.ttf":[["GothamPro-Bold.0fd2a877.ttf","font/gothman_pro/GothamPro-Bold.ttf"],"font/gothman_pro/GothamPro-Bold.ttf"],"./GothamPro-Light.eot":[["GothamPro-Light.0196bb9d.eot","font/gothman_pro/GothamPro-Light.eot"],"font/gothman_pro/GothamPro-Light.eot"],"./GothamPro-Light.woff2":[["GothamPro-Light.f2f691de.woff2","font/gothman_pro/GothamPro-Light.woff2"],"font/gothman_pro/GothamPro-Light.woff2"],"./GothamPro-Light.woff":[["GothamPro-Light.980b88e0.woff","font/gothman_pro/GothamPro-Light.woff"],"font/gothman_pro/GothamPro-Light.woff"],"./GothamPro-Light.ttf":[["GothamPro-Light.bc86c3e9.ttf","font/gothman_pro/GothamPro-Light.ttf"],"font/gothman_pro/GothamPro-Light.ttf"],"./GothamPro-Black.eot":[["GothamPro-Black.eda5e26f.eot","font/gothman_pro/GothamPro-Black.eot"],"font/gothman_pro/GothamPro-Black.eot"],"./GothamPro-Black.woff2":[["GothamPro-Black.eb40feb8.woff2","font/gothman_pro/GothamPro-Black.woff2"],"font/gothman_pro/GothamPro-Black.woff2"],"./GothamPro-Black.woff":[["GothamPro-Black.f63d7ab4.woff","font/gothman_pro/GothamPro-Black.woff"],"font/gothman_pro/GothamPro-Black.woff"],"./GothamPro-Black.ttf":[["GothamPro-Black.a9c20c99.ttf","font/gothman_pro/GothamPro-Black.ttf"],"font/gothman_pro/GothamPro-Black.ttf"],"./GothamProNarrow-Bold.eot":[["GothamProNarrow-Bold.ce1e5d82.eot","font/gothman_pro/GothamProNarrow-Bold.eot"],"font/gothman_pro/GothamProNarrow-Bold.eot"],"./GothamProNarrow-Bold.woff2":[["GothamProNarrow-Bold.4597b2ad.woff2","font/gothman_pro/GothamProNarrow-Bold.woff2"],"font/gothman_pro/GothamProNarrow-Bold.woff2"],"./GothamProNarrow-Bold.woff":[["GothamProNarrow-Bold.056cbe93.woff","font/gothman_pro/GothamProNarrow-Bold.woff"],"font/gothman_pro/GothamProNarrow-Bold.woff"],"./GothamProNarrow-Bold.ttf":[["GothamProNarrow-Bold.27db357b.ttf","font/gothman_pro/GothamProNarrow-Bold.ttf"],"font/gothman_pro/GothamProNarrow-Bold.ttf"],"./GothamPro-Medium.eot":[["GothamPro-Medium.c72e067f.eot","font/gothman_pro/GothamPro-Medium.eot"],"font/gothman_pro/GothamPro-Medium.eot"],"./GothamPro-Medium.woff2":[["GothamPro-Medium.a05cab5f.woff2","font/gothman_pro/GothamPro-Medium.woff2"],"font/gothman_pro/GothamPro-Medium.woff2"],"./GothamPro-Medium.woff":[["GothamPro-Medium.6a2219ba.woff","font/gothman_pro/GothamPro-Medium.woff"],"font/gothman_pro/GothamPro-Medium.woff"],"./GothamPro-Medium.ttf":[["GothamPro-Medium.213576fe.ttf","font/gothman_pro/GothamPro-Medium.ttf"],"font/gothman_pro/GothamPro-Medium.ttf"],"./GothamPro-BoldItalic.eot":[["GothamPro-BoldItalic.fd093699.eot","font/gothman_pro/GothamPro-BoldItalic.eot"],"font/gothman_pro/GothamPro-BoldItalic.eot"],"./GothamPro-BoldItalic.woff2":[["GothamPro-BoldItalic.ee1d9511.woff2","font/gothman_pro/GothamPro-BoldItalic.woff2"],"font/gothman_pro/GothamPro-BoldItalic.woff2"],"./GothamPro-BoldItalic.woff":[["GothamPro-BoldItalic.b1ee555b.woff","font/gothman_pro/GothamPro-BoldItalic.woff"],"font/gothman_pro/GothamPro-BoldItalic.woff"],"./GothamPro-BoldItalic.ttf":[["GothamPro-BoldItalic.1ef435c8.ttf","font/gothman_pro/GothamPro-BoldItalic.ttf"],"font/gothman_pro/GothamPro-BoldItalic.ttf"],"./GothamPro.eot":[["GothamPro.5059e881.eot","font/gothman_pro/GothamPro.eot"],"font/gothman_pro/GothamPro.eot"],"./GothamPro.woff2":[["GothamPro.de4554d0.woff2","font/gothman_pro/GothamPro.woff2"],"font/gothman_pro/GothamPro.woff2"],"./GothamPro.woff":[["GothamPro.a5f5829c.woff","font/gothman_pro/GothamPro.woff"],"font/gothman_pro/GothamPro.woff"],"./GothamPro.ttf":[["GothamPro.23f023b6.ttf","font/gothman_pro/GothamPro.ttf"],"font/gothman_pro/GothamPro.ttf"],"./GothamPro-MediumItalic.eot":[["GothamPro-MediumItalic.4e7c8355.eot","font/gothman_pro/GothamPro-MediumItalic.eot"],"font/gothman_pro/GothamPro-MediumItalic.eot"],"./GothamPro-MediumItalic.woff2":[["GothamPro-MediumItalic.3d0d9caf.woff2","font/gothman_pro/GothamPro-MediumItalic.woff2"],"font/gothman_pro/GothamPro-MediumItalic.woff2"],"./GothamPro-MediumItalic.woff":[["GothamPro-MediumItalic.1033fd56.woff","font/gothman_pro/GothamPro-MediumItalic.woff"],"font/gothman_pro/GothamPro-MediumItalic.woff"],"./GothamPro-MediumItalic.ttf":[["GothamPro-MediumItalic.a111aa4c.ttf","font/gothman_pro/GothamPro-MediumItalic.ttf"],"font/gothman_pro/GothamPro-MediumItalic.ttf"],"./GothamPro-BlackItalic.eot":[["GothamPro-BlackItalic.0da831d0.eot","font/gothman_pro/GothamPro-BlackItalic.eot"],"font/gothman_pro/GothamPro-BlackItalic.eot"],"./GothamPro-BlackItalic.woff2":[["GothamPro-BlackItalic.08a8bbea.woff2","font/gothman_pro/GothamPro-BlackItalic.woff2"],"font/gothman_pro/GothamPro-BlackItalic.woff2"],"./GothamPro-BlackItalic.woff":[["GothamPro-BlackItalic.107c32ad.woff","font/gothman_pro/GothamPro-BlackItalic.woff"],"font/gothman_pro/GothamPro-BlackItalic.woff"],"./GothamPro-BlackItalic.ttf":[["GothamPro-BlackItalic.fd188f45.ttf","font/gothman_pro/GothamPro-BlackItalic.ttf"],"font/gothman_pro/GothamPro-BlackItalic.ttf"],"./GothamProNarrow-Medium.eot":[["GothamProNarrow-Medium.7b1d9669.eot","font/gothman_pro/GothamProNarrow-Medium.eot"],"font/gothman_pro/GothamProNarrow-Medium.eot"],"./GothamProNarrow-Medium.woff2":[["GothamProNarrow-Medium.a093cd73.woff2","font/gothman_pro/GothamProNarrow-Medium.woff2"],"font/gothman_pro/GothamProNarrow-Medium.woff2"],"./GothamProNarrow-Medium.woff":[["GothamProNarrow-Medium.c508c59a.woff","font/gothman_pro/GothamProNarrow-Medium.woff"],"font/gothman_pro/GothamProNarrow-Medium.woff"],"./GothamProNarrow-Medium.ttf":[["GothamProNarrow-Medium.e1822902.ttf","font/gothman_pro/GothamProNarrow-Medium.ttf"],"font/gothman_pro/GothamProNarrow-Medium.ttf"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -507,5 +393,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
-//# sourceMappingURL=/src.e31bb0bc.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js"], null)
+//# sourceMappingURL=/stylesheet.afcfa9e4.js.map

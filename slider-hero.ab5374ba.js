@@ -117,167 +117,28 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
-var bundleURL = null;
-
-function getBundleURLCached() {
-  if (!bundleURL) {
-    bundleURL = getBundleURL();
-  }
-
-  return bundleURL;
-}
-
-function getBundleURL() {
-  // Attempt to find the URL of the current script and use that as the base URL
-  try {
-    throw new Error();
-  } catch (err) {
-    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
-
-    if (matches) {
-      return getBaseURL(matches[0]);
-    }
-  }
-
-  return '/';
-}
-
-function getBaseURL(url) {
-  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)?\/[^/]+(?:\?.*)?$/, '$1') + '/';
-}
-
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-},{}],"../node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
-var bundle = require('./bundle-url');
-
-function updateLink(link) {
-  var newLink = link.cloneNode();
-
-  newLink.onload = function () {
-    link.remove();
-  };
-
-  newLink.href = link.href.split('?')[0] + '?' + Date.now();
-  link.parentNode.insertBefore(newLink, link.nextSibling);
-}
-
-var cssTimeout = null;
-
-function reloadCSS() {
-  if (cssTimeout) {
-    return;
-  }
-
-  cssTimeout = setTimeout(function () {
-    var links = document.querySelectorAll('link[rel="stylesheet"]');
-
-    for (var i = 0; i < links.length; i++) {
-      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
-        updateLink(links[i]);
-      }
-    }
-
-    cssTimeout = null;
-  }, 50);
-}
-
-module.exports = reloadCSS;
-},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"sass/main.scss":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"./..\\images\\image-fonStat.jpg":[["image-fonStat.b1f7be80.jpg","images/image-fonStat.jpg"],"images/image-fonStat.jpg"],"./..\\images\\image-furniture.jpg":[["image-furniture.b7dbfc72.jpg","images/image-furniture.jpg"],"images/image-furniture.jpg"],"./..\\images\\image-footer.jpg":[["image-footer.b6980457.jpg","images/image-footer.jpg"],"images/image-footer.jpg"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"js/slider-hero.js":[function(require,module,exports) {
+})({"js/slider-hero.js":[function(require,module,exports) {
+var slidePosition = 2;
+showSlides(slidePosition); // function plusSlides(n) {
+//   showSlides((slidePosition = slidePosition + n));
+// }
 // * for ".dot"
+
 function currentSlide(n) {
   showSlides(slidePosition = n);
 }
 
-var dot_1 = document.querySelector(".dot[data-position-1]");
-var dot_2 = document.querySelector(".dot[data-position-2]");
-var dot_3 = document.querySelector(".dot[data-position-3]");
-dot_1.addEventListener("click", function () {
-  return currentSlide(1);
-});
-dot_2.addEventListener("click", function () {
-  return currentSlide(2);
-});
-dot_3.addEventListener("click", function () {
-  return currentSlide(3);
-});
-var slidePosition = 1;
-showSlides(slidePosition); // * our logic
-
 function showSlides(n) {
+  console.log("🚀 ~ file: slider-hero.js ~ line 13 ~ showSlides ~ n", n);
   var i;
   var slides = document.getElementsByClassName("fade");
+  console.log("🚀 ~ file: slider-hero.js ~ line 16 ~ showSlides ~ slides", slides);
   var dot = document.getElementsByClassName("dot");
-
-  for (i = 0; i < slides.length; i = i + 1) {
-    slides[i].style.display = "none";
-  }
-
-  for (i = 0; i < dot.length; i = i + 1) {
-    dot[i].className = dot[i].className.replace(" active", ""); // ? перед active должен бить пробел
-  }
-
-  slides[slidePosition - 1].style.display = "block";
-  dot[slidePosition - 1].className += " active";
-}
-},{}],"js/slider-works.js":[function(require,module,exports) {
-var slidePosition = 1;
-showSlides(slidePosition);
-
-function currentSlide(n) {
-  showSlides(slidePosition = n);
-  console.log(slidePosition);
-} // ? for "category works"
-
-
-var allCategoryRef = document.querySelector(".btn-works[data-category-all]");
-var btnWorksCategoryRef_1 = document.querySelector(".btn-works[data-category-1]");
-var btnWorksCategoryRef_2 = document.querySelector(".btn-works[data-category-2]");
-var btnWorksCategoryRef_3 = document.querySelector(".btn-works[data-category-3]");
-allCategoryRef.addEventListener("click", function () {
-  return currentSlide(1);
-});
-btnWorksCategoryRef_1.addEventListener("click", function () {
-  return currentSlide(2);
-});
-btnWorksCategoryRef_2.addEventListener("click", function () {
-  return currentSlide(3);
-});
-btnWorksCategoryRef_3.addEventListener("click", function () {
-  return currentSlide(4);
-}); // ? for arrow prev & next
-
-var getPrevRef = document.querySelector("a.prev");
-console.log("🚀 ~ file: slider-works.js ~ line 22 ~ getPrevRef", getPrevRef);
-var getNextRef = document.querySelector("a.next");
-console.log("🚀 ~ file: slider-works.js ~ line 26 ~ getNextRef", getNextRef);
-getPrevRef.addEventListener("click", function () {
-  return plusSlides(-1);
-});
-getNextRef.addEventListener("click", function () {
-  return plusSlides(1);
-});
-
-function plusSlides(n) {
-  showSlides(slidePosition = slidePosition + n);
-} // ? our logic
-
-
-function showSlides(n) {
-  console.log("🚀 ~ file: slider-works.js ~ line 38 ~ showSlides ~ n show", n);
-  var i;
-  var slides = document.getElementsByClassName("fade-works");
-  var category = document.getElementsByClassName("item-works"); // ? если slidePosition > длины псевдомассива slides
+  console.log("🚀 ~ file: slider-hero.js ~ line 16 ~ showSlides ~ dot", dot); // * если slidePosition > длины псевдомассива slides
 
   if (n > slides.length) {
     slidePosition = 1;
-  } // ? если slidePosition < 1 => возвращаем позицию последнего элемента
+  } // * если slidePosition < 1 => возвращаем позицию последнего элемента
 
 
   if (n < 1) {
@@ -288,22 +149,15 @@ function showSlides(n) {
     slides[i].style.display = "none";
   }
 
-  for (i = 0; i < category.length; i = i + 1) {
-    category[i].className = category[i].className.replace(" active", "");
+  for (i = 0; i < dot.length; i = i + 1) {
+    dot[i].className = dot[i].className.replace("active", "");
   }
 
-  slides[slidePosition - 1].style.display = "flex";
-  category[slidePosition - 1].className += " active";
+  slides[slidePosition - 1].style.display = "block";
+  console.log("🚀 ~ file: slider-hero.js ~ line 40 ~ showSlides ~ slidePosition", slidePosition);
+  dot[slidePosition - 1].className += " active";
 }
-},{}],"index.js":[function(require,module,exports) {
-"use strict";
-
-require("./sass/main.scss");
-
-require("./js/slider-hero");
-
-require("./js/slider-works");
-},{"./sass/main.scss":"sass/main.scss","./js/slider-hero":"js/slider-hero.js","./js/slider-works":"js/slider-works.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -507,5 +361,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
-//# sourceMappingURL=/src.e31bb0bc.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/slider-hero.js"], null)
+//# sourceMappingURL=/slider-hero.ab5374ba.js.map
