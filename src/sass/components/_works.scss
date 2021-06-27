@@ -74,23 +74,30 @@
     background-color: transparent;
     transition: color 250ms ease;
   }
-
+  & .img-works {
+    width: 200px;
+    object-fit: cover;
+    @media screen and (min-width: $viewport-desktop) {
+      width: 573px;
+    }
+  }
   & .slider-works {
+    position: relative;
     @media screen and (min-width: $viewport-desktop) {
       display: flex;
-      justify-content: center;
       height: 543px;
     }
 
     & .view-works {
-      background-image: linear-gradient(
-          0deg,
-          rgba(0, 0, 0, 0.54),
-          rgba(0, 0, 0, 0.54)
-        ),
-        url(./../images/image-furniture.jpg);
-      background-size: cover;
+      display: flex;
+      align-items: center;
+      position: absolute;
+      left: 0;
+      width: 574px;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.54);
       @media screen and (max-width: $pre-viewport-desktop) {
+        width: 200px;
         padding-left: 29px;
         padding-top: 120px;
         padding-right: 18px;
@@ -192,7 +199,7 @@
     justify-content: space-between;
     width: 125px;
     @media screen and (max-width: $pre-viewport-desktop) {
-      bottom: 20%;
+      bottom: 5%;
       left: 10%;
     }
     @media screen and (min-width: $viewport-desktop) {
@@ -204,6 +211,9 @@
       transform: rotate(180deg);
     }
     & .icon-controls {
+      @media screen and (max-width: $pre-viewport-desktop) {
+        --color5: #fff;
+      }
       &:hover {
         --color5: rgb(242, 163, 34);
       }
