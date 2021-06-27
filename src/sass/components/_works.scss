@@ -1,9 +1,9 @@
 .works {
   position: relative;
   flex-direction: column;
-  @media screen and (min-width: $viewport-desktop) {
-    height: 680px;
-  }
+  // @media screen and (min-width: $viewport-desktop) {
+  //   height: 680px;
+  // }
   & .title-works {
     text-align: center;
     @media screen and (max-width: $pre-viewport-desktop) {
@@ -22,6 +22,10 @@
   & .list-category-works {
     display: flex;
     justify-content: center;
+    margin-bottom: 17px;
+    @media screen and (min-width: $viewport-desktop) {
+      margin-bottom: 37px;
+    }
   }
   & .item-works {
     @media screen and (max-width: $pre-viewport-desktop) {
@@ -53,13 +57,11 @@
   }
   & .btn-works {
     @media screen and (max-width: $pre-viewport-desktop) {
-      margin-bottom: 17px;
       font-size: 16px;
       line-height: 20px;
     }
     position: relative;
     padding: 0;
-    margin-bottom: 37px;
     font-family: Gotham Pro;
     font-size: 18px;
     font-style: normal;
@@ -77,16 +79,17 @@
     @media screen and (min-width: $viewport-desktop) {
       display: flex;
       justify-content: center;
-      height: 574px;
+      height: 543px;
     }
 
     & .view-works {
-      background: linear-gradient(
+      background-image: linear-gradient(
           0deg,
           rgba(0, 0, 0, 0.54),
           rgba(0, 0, 0, 0.54)
         ),
         url(./../images/image-furniture.jpg);
+      background-size: cover;
       @media screen and (max-width: $pre-viewport-desktop) {
         padding-left: 29px;
         padding-top: 120px;
